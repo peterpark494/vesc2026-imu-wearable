@@ -4,6 +4,8 @@
 
 面向 CocopalmR-VESC 开发板的实时动作识别固件。开发板以 50 Hz 采集六轴 IMU 数据，在端侧运行手势、步态和穿戴状态识别，通过 BLE 将带时间戳的动作结果发给手机 App。运行时使用 C、RISC-V、Nuclei Studio 和 VeriHealthi SDK v3.8 的 RTOS 接口。
 
+[观看决赛现场真机演示（MP4）](https://github.com/peterpark494/vesc2026-imu-wearable/releases/download/showcase-v1/vesc2026-demo.mp4) · [查看 V4.0 的 C 推理移植示例](docs/v4-port.md)
+
 ## 我的贡献｜曹昊，队长、嵌入式开发
 
 - **固件集成与联调**：与队友共同完成 SDK 侧开发和真机测试。将采集、识别、穿戴状态与 BLE 传输按任务划分，用事件通知和环形缓冲衔接，避免多个消费者直接争用 IMU FIFO。
@@ -62,4 +64,4 @@ cc -std=c99 -Wall -Wextra -o check_result_frame tools/check_result_frame.c
 ./check_result_frame --self-test
 ```
 
-查看[固件复现与排查步骤](docs/firmware.md)。板端固件依赖单独取得的 VeriHealthi SDK v3.8、对应板卡和团队固件集成文件。仓库目前提供项目架构、汇总测试结果和独立诊断示例。
+查看[固件复现与排查步骤](docs/firmware.md)。板端固件依赖单独取得的 VeriHealthi SDK v3.8、对应板卡和团队固件集成文件。仓库提供项目架构、汇总测试结果、独立诊断工具和 C 推理移植示例。
