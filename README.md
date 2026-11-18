@@ -6,6 +6,8 @@
 
 [观看决赛现场真机演示（MP4）](https://github.com/peterpark494/vesc2026-imu-wearable/releases/download/showcase-v1/vesc2026-demo.mp4) · [查看 V4.0 的 C 推理移植示例](docs/v4-port.md)
 
+[下载 V4.0 手势与 V2.8 步态参考模型](https://github.com/peterpark494/vesc2026-imu-wearable/releases/tag/models-v4.0)。模型用于 Python 离线推理和 C 移植比对。手势权重解压后为 `.pkl`，步态权重为 `.joblib`。二者应从可信来源下载并核对 Release 中的 SHA-256。板端部署需要单独完成模型导出与固件集成。
+
 ## 我的贡献｜曹昊，队长、嵌入式开发
 
 - **固件集成与联调**：与队友共同完成 SDK 侧开发和真机测试。将采集、识别、穿戴状态与 BLE 传输按任务划分，用事件通知和环形缓冲衔接，避免多个消费者直接争用 IMU FIFO。
